@@ -1,25 +1,40 @@
-Rapport – TP Git & GitHub
-
-Nom et Prénoms :
-- Aouabdi Sourour
-- Aggouni Hibat Allah
-
+Rapport du TP Git & GitHub
+Aouabdi Sourour
+Aggouni Hibat Allah
 Spécialité : Toxicologie fondamentale appliquée
 
-Résumé sur Git et GitHub :
-Git est un système de gestion de versions qui permet de suivre les modifications d’un projet.
-GitHub est une plateforme en ligne qui permet d’héberger ces projets et de collaborer avec
-d’autres utilisateurs.
+Résumé :
+Dans ce TP, j’ai appris à utiliser l’outil Git pour suivre les versions d’un projet et envoyer ce projet sur GitHub en utilisant Google Colab.
 
-Dans ce TP, j’ai appris à :
-- créer un dépôt GitHub ;
-- le cloner dans Google Colab ;
-- ajouter et modifier des fichiers ;
-- faire des commits pour enregistrer les changements ;
-- pousser le projet vers GitHub à l’aide de la commande push.
+1. Création du dossier du projet
+J’ai créé un nouveau dossier dans Google Colab avec :
+!mkdir -p mon_projet
+%cd mon_projet
+!echo "Bonjour Git et GitHub depuis Colab" > texte.txt
 
-Lien du projet GitHub :
-https://github.com/sourour-aouabdi/Mon_projet
+2. Initialisation de Git dans le projet
+J’ai initialisé Git avec :
+!git init -b main
 
-Idée du projet :
-Créer un petit projet simple contenant un fichier texte pour tester les commandes Git et l’envoi vers GitHub.
+3. Configuration de l’identité
+J’ai configuré mon nom et email :
+!git config user.name "Sourour"
+!git config user.email "sarittasourour5@gmail.com"
+
+4. Ajout des fichiers et premier commit
+J’ai ajouté les fichiers avec :
+!git add .
+Puis j’ai créé un commit :
+!git commit -m "Premier commit depuis Colab"
+
+5. Connexion du projet à GitHub
+J’ai créé un dépôt GitHub nommé “Mon_projet”
+Puis j’ai lié le dépôt local au dépôt distant :
+!git remote add origin https://github.com/sourour-aouabdi/Mon_projet.git
+
+6. Envoi du projet vers GitHub
+J’ai envoyé les fichiers avec :
+!git push -u origin main
+
+Conclusion :
+Ce TP m’a permis de comprendre les bases essentielles de Git et GitHub : créer un projet, suivre les modifications, faire des commits et envoyer les fichiers vers un dépôt en ligne.
